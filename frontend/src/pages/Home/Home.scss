@@ -1,0 +1,159 @@
+$primary-teal: #008080;
+$dark-teal: #005353;
+$light-teal: #00a3a3;
+$accent-teal: #00cccc;
+$text-color: #ffffff;
+
+.home {
+  background: linear-gradient(135deg, $primary-teal 0%, $dark-teal 100%);
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: $text-color;
+
+  nav {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    
+    .logo {
+      color: $text-color;
+      font-size: 2rem;
+      font-weight: bold;
+      
+      svg {
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  li {
+    margin-left: 1.5rem;
+    
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: $accent-teal;
+      }
+    }
+  }
+  
+  .--btn {
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    
+    &.--btn-primary {
+      background-color: $light-teal;
+      color: $text-color;
+      border: none;
+      
+      &:hover {
+        background-color: $accent-teal;
+        transform: translateY(-2px);
+      }
+    }
+    
+    &.--btn-secondary {
+      background-color: transparent;
+      color: $text-color;
+      border: 2px solid $text-color;
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.hero-text {
+  width: 50%;
+  
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: $text-color;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .hero-buttons {
+    margin-bottom: 2rem;
+  }
+  
+  .--flex-start {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.hero-image {
+  width: 45%;
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.--mr {
+  text-align: center;
+  
+  h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: $accent-teal;
+  }
+  
+  p {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text, .hero-image {
+    width: 100%;
+  }
+
+  .hero-text {
+    margin-bottom: 2rem;
+  }
+
+  .--flex-start {
+    justify-content: center;
+  }
+}
