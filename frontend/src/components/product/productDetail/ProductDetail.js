@@ -31,11 +31,11 @@ const ProductDetail = () => {
     if (isLoggedIn === true) {
       dispatch(getProduct(id));
     }
-
+  
     if (isError) {
       console.log(message);
     }
-  }, [isLoggedIn, isError, message, dispatch]);
+  }, [id, isLoggedIn, isError, message, dispatch]); 
 
   return (
     <div className="product-detail">
